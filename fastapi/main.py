@@ -9,4 +9,3 @@ async def root():
 @app.get("/url")
 async def root():
     return { "url_curso":"https://www.udemy.com/" }
-
