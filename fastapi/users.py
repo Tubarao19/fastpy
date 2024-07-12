@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel # type: ignore
 
 app = FastAPI()
 
@@ -10,7 +10,7 @@ class Users(BaseModel):
 	age: int
 
 #entidad que se usa como base de datos de prueba
-users_list = [User(name= 'Brais', surname= 'moure', url= 'https://www.animefenix.tv/zerotwo', age= 35)]
+users_list = [Users(name= 'Brais', surname= 'moure', url= 'https://www.animefenix.tv/zerotwo', age= 35)]
 
 
 @app.get("/usersjson")
